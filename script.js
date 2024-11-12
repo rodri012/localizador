@@ -1,38 +1,30 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+// Función para obtener la fecha y hora actual
+function updateDateTime() {
+    const now = new Date();
+    const date = now.toLocaleDateString();
+    const time = now.toLocaleTimeString();
+
+    document.getElementById("date").textContent = `Fecha: ${date}`;
+    document.getElementById("time").textContent = `Hora: ${time}`;
 }
 
-/* Estilo de la página */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #0d0d0d;
-    color: #00ccff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+// Función para obtener la ubicación
+function updateLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+            const lat = position.coords.latitude.toFixed(2);
+            const lon = position.coords.longitude.toFixed(2);
+            document.getElementById("location").textContent = `Ubicación: Lat ${lat}, Lon ${lon}`;
+        }, () => {
+            document.getElementById("location").textContent = "Ubicación: No disponible";
+        });
+    } else {
+        document.getElementById("location").textContent = "Geolocalización no soportada";
+    }
 }
 
-.container {
-    text-align: center;
-    padding: 20px;
-    border: 2px solid #00ccff;
-    border-radius: 10px;
-    background-color: #1a1a1a;
-    max-width: 500px;
-    width: 100%;
-}
+// Llamada inicial y actualización periódica
+updateDateTime();
+updateLocation();
+setInterval(updateDateTime, 1000); // Actualiza cada segundo
 
-h1 {
-    font-size: 1.8em;
-    margin-bottom: 20px;
-    color: #00ffcc;
-}
-
-#datetime p {
-    font-size: 1.2em;
-    margin: 10px 0;
-}
