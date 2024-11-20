@@ -1,20 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Tecnológica</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protocolo Extraterrestre</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="icons/spaceship.png" type="image/png">
 </head>
 <body>
-    <div class="container">
-        <h1>Bienvenidos</h1>
-        <div id="datetime">
-            <p id="date">Fecha: --</p>
-            <p id="time">Hora: --</p>
-            <p id="location">Ubicación: Detectando...</p>
-        </div>
+  <header>
+    <div class="logo">
+      <img src="icons/spaceship.png" alt="Nave espacial">
+      <h1>Protocolo Extraterrestre</h1>
     </div>
-    <script src="script.js"></script>
+    <nav>
+      <ul>
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#about">Sobre nosotros</a></li>
+        <li><a href="#gallery">Galería</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h2>Explora el universo más allá</h2>
+    <p>Un viaje hacia lo desconocido: OVNIs, naves espaciales y más.</p>
+    <button id="explore-button">Explorar ahora</button>
+  </section>
+
+  <section id="about">
+    <h2>Sobre nosotros</h2>
+    <p>En Protocolo Extraterrestre, somos apasionados por los misterios del universo. Descubre los secretos que esconden los cielos.</p>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <h2>Galería</h2>
+    <div class="image-grid">
+      <img src="images/ufo1.jpg" alt="OVNI 1">
+      <img src="images/ufo2.jpg" alt="OVNI 2">
+      <img src="images/alien.jpg" alt="Extraterrestre">
+      <img src="images/spaceship.jpg" alt="Nave espacial">
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2024 Protocolo Extraterrestre. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
