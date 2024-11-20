@@ -1,98 +1,75 @@
-/* General */
 body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background: #0d0d0d;
-  color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
 }
 
-/* Header */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background: #1a1a1a;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    background: #2e86de;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
 }
 
-.logo img {
-  width: 40px;
+h1, h2 {
+    margin: 0;
 }
 
-.logo h1 {
-  margin: 0 0 0 10px;
-  font-size: 1.5rem;
-  color: #50fa7b;
+main {
+    padding: 2rem;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
+.descripcion {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
 }
 
-nav ul li {
-  margin: 0 15px;
+.habilidades h3, .clubes h3, .idolos h3 {
+    border-bottom: 2px solid #2e86de;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-nav ul li a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
+.barra {
+    margin-bottom: 1rem;
 }
 
-/* Hero Section */
-.hero {
-  text-align: center;
-  padding: 100px 20px;
-  background: url('images/background.jpg') center/cover no-repeat;
-  color: #ffffff;
+.barra label {
+    display: block;
+    margin-bottom: 0.3rem;
 }
 
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+.barra div {
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+.barra span {
+    display: block;
+    height: 100%;
+    background: #2e86de;
 }
 
-.hero button {
-  padding: 10px 20px;
-  background: #50fa7b;
-  border: none;
-  border-radius: 5px;
-  color: #000;
-  font-size: 1rem;
-  cursor: pointer;
+.club {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
-/* Gallery */
-.gallery {
-  padding: 50px 20px;
-  background: #1a1a1a;
+.club img {
+    width: 50px;
+    margin-right: 1rem;
 }
 
-.gallery .image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-.gallery img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Footer */
 footer {
-  text-align: center;
-  padding: 20px;
-  background: #1a1a1a;
-  color: #50fa7b;
+    text-align: center;
+    background: #2e86de;
+    color: #fff;
+    padding: 1rem;
+    margin-top: 2rem;
 }
