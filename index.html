@@ -3,37 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuenta Regresiva Partido</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        .countdown {
-            font-size: 2rem;
-            margin-top: 50px;
-            color: #333;
-        }
-        .match-details {
-            margin-top: 20px;
-            font-size: 1.5rem;
-            color: #555;
-        }
-        .logos {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-        }
-        .logos img {
-            width: 100px;
-            height: 100px;
-            object-fit: contain;
-        }
-    </style>
+    <title>Temporizador Regresivo Partido</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="countdown" id="countdown"></div>
@@ -49,19 +20,20 @@
 
     <script>
         // Configuración de la fecha del partido
-        const partidoFecha = new Date("2023-12-17T20:00:00-05:00"); // 15 de diciembre a las 8:00 PM en Perú
+        const partidoFecha = new Date("2023-12-15T20:00:00-05:00"); // 15 de diciembre a las 8:00 PM en Perú
 
         function actualizarCuentaRegresiva() {
             const ahora = new Date().getTime();
             const tiempoRestante = partidoFecha - ahora;
 
             if (tiempoRestante > 0) {
+                const dias = Math.floor(tiempoRestante / (1000 * 60 * 60 * 24));
                 const horas = Math.floor((tiempoRestante % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutos = Math.floor((tiempoRestante % (1000 * 60 * 60)) / (1000 * 60));
                 const segundos = Math.floor((tiempoRestante % (1000 * 60)) / 1000);
 
                 document.getElementById("countdown").textContent = 
-                    `Faltan ${Math.floor(tiempoRestante / (1000 * 60 * 60 * 24))} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos para el partido.`;
+                    `Faltan ${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos para el partido.`;
             } else {
                 document.getElementById("countdown").textContent = "¡El partido ha comenzado!";
             }
