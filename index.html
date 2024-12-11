@@ -4,7 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temporizador Regresivo Partido</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .countdown {
+            font-size: 2rem;
+            margin-top: 50px;
+            color: #333;
+        }
+        .match-details {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #555;
+        }
+        .logos {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+        .logos img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+    </style>
 </head>
 <body>
     <div class="countdown" id="countdown"></div>
@@ -34,11 +63,14 @@
 
                 document.getElementById("countdown").textContent = 
                     `Faltan ${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos para el partido.`;
+
+                console.log(`Tiempo restante: ${dias} días, ${horas} horas, ${minutos} minutos, ${segundos} segundos.`);
             } else {
                 document.getElementById("countdown").textContent = "¡El partido ha comenzado!";
+                console.log("¡El partido ha comenzado!");
             }
         }
-print(tiempoRestante);
+
         actualizarCuentaRegresiva();
         setInterval(actualizarCuentaRegresiva, 1000);
     </script>
