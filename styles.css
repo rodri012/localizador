@@ -1,32 +1,75 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-}
-
-.countdown {
-    font-size: 2rem;
-    margin-top: 50px;
+    background-color: #f4f4f9;
     color: #333;
 }
 
-.match-details {
-    margin-top: 20px;
-    font-size: 1.5rem;
-    color: #555;
+header {
+    background: #2e86de;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
 }
 
-.logos {
-    margin-top: 20px;
+h1, h2 {
+    margin: 0;
+}
+
+main {
+    padding: 2rem;
+}
+
+.descripcion {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.habilidades h3, .clubes h3, .idolos h3 {
+    border-bottom: 2px solid #2e86de;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.barra {
+    margin-bottom: 1rem;
+}
+
+.barra label {
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.barra div {
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.barra span {
+    display: block;
+    height: 100%;
+    background: #2e86de;
+}
+
+.club {
     display: flex;
-    justify-content: center;
-    gap: 50px;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
-.logos img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
+.club img {
+    width: 50px;
+    margin-right: 1rem;
+}
+
+footer {
+    text-align: center;
+    background: #2e86de;
+    color: #fff;
+    padding: 1rem;
+    margin-top: 2rem;
 }
